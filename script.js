@@ -21,7 +21,10 @@ themeToggler.onclick = () => {
     document.body.classList.remove('active');
   }
 }
+
+var path = document.querySelector('#star-path');
 var pathLength = path.getTotalLength();
+
 
 path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
@@ -48,9 +51,20 @@ window.addEventListener("scroll", function (e) {
   } else {
     path.style.strokeDasharray = pathLength + ' ' + pathLength;
   }
+
 });
 
 function snap() {
   var thanos = [document.getElementById('about'), document.getElementById('projects'),]
-  var newThanos = thanos.map((x) => { return x.classList.add('disap'); });
+  const newThanos = thanos.map((x) => { return x.classList.add('disap'); });
 }
+
+window.addEventListener('scroll', function(){
+  var target=[document.querySelector('.parright'),document.querySelector('.parleft')];
+  var i=0, len=target.length;
+  for(i; i<len; i++){
+      var pos=window.pageYOffset * target[i].dataset.rate;
+      
+      target[i].style.transform='translate('+pos+'px , 0px)';
+  }
+})

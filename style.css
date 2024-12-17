@@ -223,8 +223,8 @@ section {
 
 #theme-toggler {
     position: fixed;
-    top: 3rem;
-    right: 9rem;
+    top: 8rem;
+    right: 6.2rem;
     z-index: 1000;
     height: 5rem;
     width: 5rem;
@@ -609,6 +609,12 @@ section {
     #star-svg {
         left: 84%;
         top: 10.5%;
+    }
+
+    #theme-toggler{
+        position: fixed;
+        top: 6.8rem;
+        right: 4.5rem;
     }
 
 }
